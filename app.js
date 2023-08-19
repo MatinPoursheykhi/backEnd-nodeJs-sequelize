@@ -3,6 +3,7 @@ const cors = require('cors');
 const app = express()
 const port = 8000
 const db = require('./models')
+
 // use middileware
 app.use(cors()); 
 // cors will allow front-origins to access to the server 
