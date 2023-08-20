@@ -27,6 +27,6 @@ db.QueryTypes = QueryTypes
 db.connection = connection
 db.Op = Op
 
-db.Users = require('./users.model')(connection, Sequelize)
+db.users = require('./users.model')(connection, Sequelize)
 
 module.exports = db

@@ -2,7 +2,7 @@ const db = require('../models')
 const connection = db.connection
 exports.add = (_req, _res) => {
     if (!!_req.body.mobile && !!_req.body.age) {
-        db.Users.create(_req.body)
+        db.users.create(_req.body)
             .then((result) => {
                 _res.status(200).send(result)
             }).catch((err) => {
@@ -12,7 +12,7 @@ exports.add = (_req, _res) => {
         _res.status(400).send({ message: 'mobile and age are force' })
 }
 exports.edit = (_req, _res) => {
-    db.Users.update(_req.body, {
+    db.users.update(_req.body, {
         where: {
             id: _req.params.id
         }
@@ -27,7 +27,7 @@ exports.edit = (_req, _res) => {
         });
 }
 exports.list = (_req, _res) => {
-    db.Users.findAll()
+    db.users.findAll()
         .then((result) => {
             _res.status(200).send(result)
         }).catch((err) => {
@@ -35,7 +35,7 @@ exports.list = (_req, _res) => {
         });
 }
 exports.info = (_req, _res) => {
-    db.Users.findByPk(_req.params.id)
+    db.users.findByPk(_req.params.id)
         .then((result) => {
             _res.send(result)
         }).catch((err) => {
@@ -43,7 +43,7 @@ exports.info = (_req, _res) => {
         });
 }
 exports.delete = (_req, _res) => {
-    db.Users.destroy({ where: { id: _req.params.id } })
+    db.users.destroy({ where: { id: _req.params.id } })
         .then((result) => {
             _res.status(200).send({ message: 'the operation has done successfuly' })
         }).catch((err) => {
