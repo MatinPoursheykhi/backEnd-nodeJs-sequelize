@@ -4,4 +4,4 @@ Also its data base is sql server but you can easily switch it on mysql as well.
 it provide CRUD routes of users table.
 this back is provided any thing via sequelize , so you can easily improve it.
 
-** if you need the frontEnd of this project you are able to use frontEnd-vue on my gitHub repositories.
+** if you need the frontEnd of this project you are able to use frontEnd-vue-vite and frontEnd-react-vite on my gitHub repositories.
