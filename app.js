@@ -11,9 +11,9 @@ app.use(express.static('./upload'))
 require('./routes')(app)
 
 db.connection.sync({
-    // alter:
+    alter:
     // {drop:false}
-    // true
+    true
     // force:true
 })
 
