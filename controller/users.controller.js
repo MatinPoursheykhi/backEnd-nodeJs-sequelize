@@ -1,5 +1,4 @@
 const db = require('../models')
-const connection = db.connection
 exports.add = (_req, _res) => {
     if (!!_req.body.mobile && !!_req.body.age) {
         db.users.create(_req.body)
